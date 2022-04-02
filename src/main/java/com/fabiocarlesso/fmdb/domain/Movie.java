@@ -12,7 +12,7 @@ public class Movie {
     private String year;
     private String image;
     private String crew;
-    private String imdbRating;
-    private String imdbRatingCount;
+    private String imDbRating;
+    private String imDbRatingCount;
 
 }

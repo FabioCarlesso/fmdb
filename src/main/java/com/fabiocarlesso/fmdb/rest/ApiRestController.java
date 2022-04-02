@@ -24,7 +24,8 @@ public class ApiRestController {
         Gson gson = new Gson();
         TOP250Info top250info = gson.fromJson(result, TOP250Info.class);
         for(Movie movie : top250info.getItems()) {
-            System.out.println(movie.getRank() +" - "+movie.getTitle());
+            System.out.println(movie.getRank() +" - "+movie.getTitle()+" "+movie.getYear()+" - "+movie.getImDbRating());
+            // System.out.println(movie.toString());
         }
         return result;
     }
