@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html th:fragment="layout (content)">
+<head>
+    <title>Movie List</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link media="all" rel="stylesheet" th:href="@{/assets/bootstrap.min.css}" type="text/css">
+</head>
+<body class="bg-light">
+<nav class="navbar sticky-top navbar-dark bg-dark">
+    <a class="navbar-brand" th:href="@{/}">
+        <img alt="Logo" class="d-inline-block align-top" height="30" th:src="@{/assets/brand.png}" width="30">
+        Movie List
+    </a>
+    <ul class="navbar-nav flex-row">
+        <li class="nav-item mx-3">
+            <a class="nav-link" th:href="@{/}">See movies</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn btn-outline-light" th:href="@{/movie/new}">Add new movie</a>
+        </li>
+    </ul>
+</nav>
+<div class="container pt-4">
+    <th:block th:insert="${content}"/>
+</div>
+</body>
+</html>

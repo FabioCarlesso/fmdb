@@ -16,7 +16,7 @@ public class MovieService {
     @Value("${apikey}")
     private String imdbApiKey;
     
-    private static final String imdbUri = "https://imdb-api.com/en/API/Top250Movies/";
+    private static final String IMDB_URI = "https://imdb-api.com/en/API/Top250Movies/";
 
     public List<Movie> findTOP250Movies() {
         String result = getJsonToStringFromImdb();
@@ -26,7 +26,7 @@ public class MovieService {
     }
 
     public String getJsonToStringFromImdb (){
-        String uri = imdbUri+imdbApiKey;
+        String uri = IMDB_URI+imdbApiKey;
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(uri, String.class);
     }
